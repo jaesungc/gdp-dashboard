@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
-
+ 
+## 수정 중
 # 1 네이버 API를 호출하여 뉴스 검색 결과를 가져오는 get_news( ) 함수 정의
 def get_news(query, display=10):
     # 2 네이버 API를 호출하여 url 생성
