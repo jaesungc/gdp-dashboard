@@ -8,8 +8,8 @@ def get_news(query, display=10):
     # 2 네이버 API를 호출하여 url 생성
     url = f"https://openapi.naver.com/v1/search/news.json?query={query}&display={display}"
     headers = {
-        'X-Naver-Client-Id': ["NAVER_CLIENT_ID"],
-        'X-Naver-Client-Secret': ["NAVER_CLIENT_SECRET"]
+        'X-Naver-Client-Id': st.secrets["NAVER_CLIENT_ID"],
+        'X-Naver-Client-Secret': st.secrets["NAVER_CLIENT_SECRET"]
     }
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
